@@ -1,0 +1,49 @@
+.schedule-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.schedule-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.course-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 120px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.course-box:hover {
+  transform: scale(1.05);
+}
+
+/* Different colors for each course */
+.computer-graphics { background-color: #ff5733; }
+.human-computer { background-color: #33a1ff; }
+.software-management { background-color: #28a745; }
+.back-main { background-color: #ffc107; }
+.computer-architecture { background-color: #6f42c1; }
+
+.course-content {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #222;
+}

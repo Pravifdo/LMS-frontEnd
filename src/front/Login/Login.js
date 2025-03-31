@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -10,6 +11,7 @@ const Login = () => {
 
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
+    const navigate = useNavigate(); // To navigate on successful login
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,22 +22,32 @@ const Login = () => {
         setError(null);
         setSuccess(null);
 
+        // Validate input fields
+        if (!formData.email.includes("@")) {
+            setError("Invalid email format");
+            return;
+        }
+        if (formData.password.length < 6) {
+            setError("Password must be at least 6 characters");
+            return;
+        }
+
         try {
-            const response = await fetch("http://localhost:4000/api/login", {
+            const response = await fetch("http://localhost:4000/api/v1/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
+                
             });
 
             const data = await response.json();
 
             if (response.ok) {
                 setSuccess("Login successful!");
-                setError(null);
-                localStorage.setItem("token", data.token); // Store JWT token in localStorage
-                console.log("Token:", data.token);
+                localStorage.setItem("token", data.token);
+                navigate("/Schedule"); // Redirect to Schedule page
             } else {
-                setError(data.msg || "Login failed! Try again.");
+                setError(data.msg || "Invalid email or password. Try again.");
             }
         } catch (err) {
             setError("Something went wrong! Please try again.");
