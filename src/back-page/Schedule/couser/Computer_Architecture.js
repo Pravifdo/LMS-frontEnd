@@ -3,7 +3,7 @@ import React from 'react'
 const Computer_Architecture = () => {
   return (
     <div>
-      jv
+      jvgnjhjvnjvnjvnjvnjvnjvnjvnjvnjvnjvnjvnjvnjvnjvnjvnjvn
     </div>
   )
 }

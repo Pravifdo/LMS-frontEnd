@@ -1,49 +1,69 @@
+/* Main container */
 .schedule-container {
   text-align: center;
-  padding: 20px;
-  background-color: #f4f4f4;
+  padding: 30px;
+  background-color: #fdfdfd; /* light white background */
+  border: 2px solid #e0e0e0;
+  min-height: 50vh;
 }
 
+/* Title style */
 .schedule-title {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
   color: #333;
+  margin-bottom: 30px;
 }
 
+/* Wrapper for the boxes */
 .course-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
+/* Each box */
 .course-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 120px;
-  font-size: 18px;
+  width: 280px;
+  height: 130px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
-  border-radius: 10px;
-  transition: transform 0.2s ease-in-out;
+  color: #fff;
+  border-radius: 12px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
+/* Hover effect */
 .course-box:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Different colors for each course */
-.computer-graphics { background-color: #ff5733; }
-.human-computer { background-color: #33a1ff; }
-.software-management { background-color: #28a745; }
-.back-main { background-color: #ffc107; }
-.computer-architecture { background-color: #6f42c1; }
+/* Optional div inside link (used in Computer Graphics) */
+.course-image {
+  padding: 10px;
+}
 
-.course-content {
-  margin-top: 30px;
-  font-size: 22px;
-  color: #222;
+/* Unique background colors */
+.computer-graphics {
+  background-color: #ff5733; /* red-orange */
+}
+
+.human-computer {
+  background-color: #33a1ff; /* blue */
+}
+
+.software-management {
+  background-color: #28a745; /* green */
+}
+
+.computer-architecture {
+  background-color: #6f42c1; /* purple */
 }
