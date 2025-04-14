@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Schedule.css";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "./Navbar/Navbar ";
+
 
 const Schedule = () => {
   const [studentName,/* setStudentName*/] = useState("");
@@ -19,7 +21,9 @@ const Schedule = () => {
 
   return (
     <div >
-
+      <div className="Navbar">
+        <Navbar/>
+      </div>
  
     <div className="schedule-container">
       <h2 className="welcome-text">Hi 👋 {studentName}! Welcome to your LMS.</h2>

@@ -100,8 +100,8 @@ const Login = () => {
                         value={formData.role}
                         onChange={handleChange}
                     >
-                        <option value="student">Student</option>
-                        <option value="teacher">Teacher</option>
+                        <option value="student">student</option>
+                        <option value="teacher">teacher</option>
                     </select>
 
                     <button type="submit">Login</button>
