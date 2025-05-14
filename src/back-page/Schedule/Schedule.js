@@ -5,18 +5,18 @@ import Navbar from "./Navbar/Navbar ";
 
 
 const Schedule = () => {
-  const [studentName,/* setStudentName*/] = useState("");
+  const [studentName,setStudentName] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("token");
     const name = localStorage.getItem("studentName");
 
-    /*if (!isLoggedIn || !name) {
+    if (!isLoggedIn || !name) {
       navigate("/login");
     } else {
       setStudentName(name);
-    }*/
+    }
   }, [navigate]);
 
   return (

@@ -10,6 +10,8 @@ import ComputerArchitecture from './back-page/Schedule/couser/Computer_Architect
 import ComputerGraphics from './back-page/Schedule/couser/Computer_Graphics';
 import HumanComputer from './back-page/Schedule/couser/Human_computer';
 import SoftwareManagement from './back-page/Schedule/couser/Software_Management';
+import StudentCourses from './pages/StudentDashboard';
+import StudentCourseView from './pages/StudentCourseView';
 
 const App = () => {
   return (
@@ -29,6 +31,11 @@ const App = () => {
           <Route path="/Human_computer" element={<HumanComputer />} />
           <Route path="/Software_Management" element={<SoftwareManagement />} />
           <Route path="/Computer_Architecture" element={<ComputerArchitecture />} />
+          <Route path="/student/courses" element={<StudentCourses />} />
+          <Route path="/student/course/:id" element={<StudentCourseView />} />
+
+
+          
         </Routes>
       </div>
     </Router>
